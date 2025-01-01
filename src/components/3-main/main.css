@@ -1,0 +1,117 @@
+.main {
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* 
+    Left Section
+*/
+
+.main section.left {
+  gap: 10px;
+}
+.main section.left button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  padding: 0.75rem;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: 0.3s;
+  border: none;
+  transition: 0.3s;
+  font-weight: 600;
+}
+.main section.left button:hover {
+  opacity: 1;
+}
+.main section.left button:focus {
+  border: 2px solid var(--blue);
+  opacity: 1;
+}
+
+/* 
+    Right Section
+*/
+.main section.right {
+  flex-grow: 1;
+  min-width: 200px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.main section.right .project {
+  width: 280px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+}
+.main section.right .project img {
+  width: 280px;
+}
+.main section.right .project .box {
+  padding: 1rem 0.5rem 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.main section.right .project .box p {
+  margin: 0;
+  margin: 0.7rem 0;
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  width: 260px; /* تحديد عرض العنصر */
+  height: 3em; /* تحديد ارتفاع العنصر ليشمل سطرين فقط */
+  overflow: hidden; /* إخفاء النص الزائد */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* إظهار سطرين فقط */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis; /* إضافة النقاط في النهاية */
+}
+.main section.right .project .technologies {
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.main section.right .project .technologies span {
+  /* font-size: 20px; */
+  color: var(--color);
+  padding: 5px;
+  background-color: var(--bg-technologies);
+  border-radius: 20px;
+}
+.main section.right .project .links {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.main section.right .project .links .flex a span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+.main section.right .project .links .flex a p {
+  font-weight: bold;
+  color: red;
+}
+
+.main section.right .card .links p.more {
+}
+.main section.right .card .links span.right {
+}
+.main .right img {
+  width: 280px;
+}
+/* 
+    Media Query
+*/
+
+@media (max-width: 767px) {
+  .main {
+    flex-direction: column;
+  }
+  .main .left {
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+}

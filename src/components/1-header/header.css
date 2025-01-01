@@ -1,0 +1,122 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+header nav ul.flex {
+  background-color: var(--bg-header-nav);
+  gap: 16px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 1px 1px 20px #1515152e;
+}
+header ul li a {
+  color: var(--title);
+  letter-spacing: 0.3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+header ul li a:hover {
+  color: var(--blue);
+  font-weight: 900;
+  transition: 0.2s;
+}
+header button {
+  font-size: 1.2rem;
+  width: 42.4px;
+  height: 42.4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1.6px solid #fea50136;
+  color: var(--subtitle);
+  transition: 0.2s;
+}
+header button:hover {
+  border: 1.6px solid var(--orange);
+  color: var(--color);
+}
+
+/* 
+  overlay
+  &&
+  pop up menu
+*/
+
+header .overlay {
+  inset: 0;
+  position: fixed;
+  z-index: 10;
+  background-color: rgba(40, 40, 48, 0.95);
+  backdrop-filter: blur(2px);
+}
+header ul.modal {
+  width: 65%;
+  border-radius: 1rem;
+  margin: 3rem auto;
+  padding: 2rem 2rem 1rem;
+  z-index: 11;
+  position: relative;
+  background-color: var(--secondary);
+  animation: popup-scale 0.7s 1;
+}
+header ul.modal button.close {
+  color: var(--subtitle);
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+}
+header ul.modal button:hover {
+  font-weight: 900;
+  color: red;
+  rotate: 180deg;
+}
+header ul.modal li {
+  padding: 10px 5px;
+}
+header ul.modal li a {
+  font-size: 1rem;
+}
+header ul.modal li:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+/* 
+  Animation
+*/
+
+@keyframes popup-scale {
+  0% {
+    scale: 0;
+  }
+  60% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* 
+  Media
+*/
+
+@media (max-width: 767px) {
+  header nav {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  header .menu {
+    display: none;
+  }
+  header nav {
+    display: block;
+  }
+}

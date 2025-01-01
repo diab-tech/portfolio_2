@@ -1,0 +1,38 @@
+.hero .image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1.6px solid var(--orange);
+  margin-bottom: -10px;
+}
+.hero .image .verified {
+  color: #5dbcfc;
+}
+.hero h1 {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: var(--title);
+}
+.hero p {
+  color: var(--subtitle);
+  line-height: 1.7;
+}
+.hero .social-icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 75px;
+}
+
+.hero .social-icon a:not(:last-child) {
+  margin-right: 20px;
+}
+.hero .social-icon a span {
+  font-size: 22px;
+  color: var(--subtitle);
+}
+.hero .social-icon span:hover {
+  color: var(--title);
+}
