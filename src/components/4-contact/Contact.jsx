@@ -1,12 +1,20 @@
 import React from "react";
 import "./contact.css";
 export default function Contact() {
+  let a = 5; // 101
+  let b = 3; // 011
+
+  a = a ^ b;
+  b = a ^ b;
+  a = a ^ b;
+
+  console.log(a, b);
   return (
     <div className="contact p-relative">
-      Contact Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque
-      beatae ab dicta omnis velit ducimus, quae expedita totam mollitia commodi
-      repellat aspernatur exercitationem temporibus unde ea ipsam possimus et
-      quasi?
+      <div className="title flex">
+        <span className="mail-icon icon-envelope block"></span>
+        <h2>Contact Us</h2>
+      </div>
       <div className="border-line" />
     </div>
   );

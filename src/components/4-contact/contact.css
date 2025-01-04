@@ -1,0 +1,7 @@
+.contact .title {
+  justify-content: flex-start;
+}
+.contact .mail-icon {
+  font-size: 22px;
+  color: var(--subtitle);
+}

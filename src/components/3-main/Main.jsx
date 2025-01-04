@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./main.css";
 import { Link } from "react-router-dom";
 const projects = [
@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     name: "Bondi",
     category: "html & css",
-    image: "/public/bondi.png",
+    image: "/bondi.png",
     link: "https://diab-tech.github.io/Bondi/",
     github: "https://github.com/diab-tech/Bondi",
     description:
@@ -17,7 +17,7 @@ const projects = [
     id: 2,
     name: "Small Store",
     category: "JavaScript",
-    image: "/public/small-store.png",
+    image: "/small-store.png",
     link: "https://my-first-domain-v2.netlify.app/",
     github: "https://github.com/diab-tech/my-first-domain",
     description:
@@ -35,7 +35,7 @@ const projects = [
     id: 3,
     name: "Company Page",
     category: "JavaScript",
-    image: "/public/company-page.png",
+    image: "/company-page.png",
     link: "https://diab-tech.github.io/special-design/",
     github: "https://github.com/diab-tech/special-design",
     description:
@@ -45,21 +45,50 @@ const projects = [
 ];
 
 // filters
-// All Projects
+// All Projects Filter
 const all = () => {
   projects.find((p) => console.log(p.category == "JavaScript"));
 };
 export default function Main() {
+  const lastScrollY = useRef(null);
+  useEffect(() => {
+    const nav = document.querySelector(".left");
+
+    if (!nav) {
+      console.error("Element With class 'left' Not Fount In DOM.");
+      return; // to stop here if (!nav)
+    }
+
+    const handleScroll = () => {
+      console.log("Current scroll position:", window.scrollY);
+      if (window.scrollY > lastScrollY.current && window.scrollY > 600) {
+        // Scroll Down
+        nav.classList.add("hidden-nav");
+      } else {
+        // Scroll Up
+        nav.classList.remove("hidden-nav");
+      }
+      lastScrollY.current = window.scrollY; //update value after handleScroll is important
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    //clean up to avoid memory leaks
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []); // to run only once on mount
+
   return (
-    <div className="main flex p-relative">
-      <section className="left border flex flex-column">
+    <div className="main flex p-relative ">
+      <section className="left flex flex-column">
         <button onClick={() => all()}>All Projects</button>
         <button>HTML & CSS</button>
         <button>JavaScript</button>
         <button>React & MUI</button>
         <button>Node & Express</button>
       </section>
-      <section className="right flex border">
+      <section className="right flex ">
         {projects.map((p) => (
           <div className="project" key={p.id}>
             <img src={p.image} />

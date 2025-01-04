@@ -4,7 +4,7 @@ function Hero() {
   return (
     <div className="hero p-relative">
       <div className="image">
-        <img src="/public/photo_2024-12-13_21-53-18-modified.png" />
+        <img src="/photo_2024-12-13_21-53-18-modified.png" />
         <span className="verified icon-verified"></span>
       </div>
       <h1>

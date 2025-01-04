@@ -19,7 +19,7 @@ button:active {
   /* transition: 3s; */
 }
 :root {
-  --primary: #fff;
+  --primary: rgb(250, 250, 250);
   --secondary: rgb(255, 255, 255);
 
   --icon-hover: #d4d4d8;
@@ -69,6 +69,12 @@ body.light-mode .sun {
   .container {
     width: 85%;
     padding: 0 1rem;
+  }
+}
+@media (min-width: 1199px) {
+  .container {
+    width: 70%;
+    padding: 0 2rem;
   }
 }
 .border-line {
