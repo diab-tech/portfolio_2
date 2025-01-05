@@ -5,6 +5,7 @@ import Main from "./components/3-main/Main";
 import Contact from "./components/4-contact/Contact";
 import { Routes, Route } from "react-router-dom";
 import ProjectDetails from "./components/Project-details";
+import Footer from "./components/5-footer/Footer";
 function App() {
   return (
     <div className="container">
@@ -17,6 +18,7 @@ function App() {
               <Hero />
               <Main />
               <Contact />
+              <Footer />
             </>
           }
         />

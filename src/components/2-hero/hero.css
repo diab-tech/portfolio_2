@@ -4,6 +4,7 @@
   border-radius: 50%;
   border: 1.6px solid var(--orange);
   margin-bottom: -10px;
+  padding: 1px;
 }
 .hero .image .verified {
   color: #5dbcfc;

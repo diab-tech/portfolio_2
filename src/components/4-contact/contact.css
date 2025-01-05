@@ -1,7 +1,62 @@
 .contact .title {
   justify-content: flex-start;
+  margin-bottom: 1rem;
 }
-.contact .mail-icon {
-  font-size: 22px;
+.contact .title span.mail-icon {
+  margin-right: 1rem;
+  font-size: 1.8rem;
   color: var(--subtitle);
+}
+.contact .title h2 {
+  font-size: 2.1rem;
+  color: var(--title);
+}
+.contact p.subtitle {
+  color: var(--subtitle);
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+.contact div.flex {
+  margin-bottom: 1.5rem;
+}
+.contact div.flex label {
+  margin-right: 1rem;
+  color: var(--subtitle);
+}
+.contact div.flex input,
+.contact div.flex textarea {
+  border-radius: 6px;
+  padding: 0.5rem;
+  width: 60%;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+  outline: none;
+}
+.contact div.flex input:hover,
+.contact div.flex textarea:hover,
+.contact div.flex input:focus,
+.contact div.flex textarea:focus {
+  border-color: var(--subtitle);
+}
+.contact div.flex textarea {
+  height: 100px;
+}
+.contact form button#submit {
+  padding: 0.8rem 2rem;
+  border-radius: 6px;
+  background-color: rgba(36, 37, 46, 1);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+.contact form button#submit:hover {
+  scale: 1.03;
+  cursor: pointer;
+}
+.contact form button#submit:disabled {
+  background-color: #ccc;
+  cursor: default;
+  scale: 1;
 }

@@ -16,8 +16,12 @@ a {
 }
 button:active {
   scale: 0.97;
-  /* transition: 3s; */
 }
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 :root {
   --primary: rgb(250, 250, 250);
   --secondary: rgb(255, 255, 255);
@@ -27,10 +31,12 @@ button:active {
   --orange: #ff8c00;
   --title: #27272a;
   --border: #e4e4e4;
+  --card-border: #e4e4e4;
   --color: #27272a;
   --bg-header-nav: #fdfdfd;
-  --blue: #5dbcfc;
   --bg-technologies: #eaeaea;
+  /*  */
+  --rad-6: 6px;
 }
 .dark-mode {
   --primary: #000;
@@ -39,6 +45,8 @@ button:active {
   --subtitle: rgb(161 161 170);
   --title: rgb(244 244 245);
   --border: rgba(63, 63, 70, 0.4);
+  --blue: rgb(93, 188, 252);
+  --blue-transparent: rgba(93, 188, 252, 0.3);
   --bg-header-nav: #27272a;
   --color: #f4f4f5;
   --bg-technologies: #252525;

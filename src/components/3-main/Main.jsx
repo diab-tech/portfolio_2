@@ -47,7 +47,7 @@ const projects = [
 // filters
 // All Projects Filter
 const all = () => {
-  projects.find((p) => console.log(p.category == "JavaScript"));
+  projects.find((p) => p.category === "JavaScript");
 };
 export default function Main() {
   const lastScrollY = useRef(null);
@@ -60,7 +60,6 @@ export default function Main() {
     }
 
     const handleScroll = () => {
-      console.log("Current scroll position:", window.scrollY);
       if (window.scrollY > lastScrollY.current && window.scrollY > 600) {
         // Scroll Down
         nav.classList.add("hidden-nav");

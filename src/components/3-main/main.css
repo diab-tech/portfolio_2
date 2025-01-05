@@ -30,8 +30,7 @@
   font-size: 16px;
   color: #fff;
   opacity: 0.5;
-  border-radius: 5px;
-  transition: 0.3s;
+  border-radius: var(--rad-6);
   border: none;
   transition: 0.3s;
   font-weight: 600;
@@ -61,11 +60,20 @@
 }
 .main section.right .project {
   width: 280px;
-  border: 2px solid var(--border);
-  border-radius: 5px;
+  /* border: 1px solid var(--card-border-transparent); */
+  border: 1px solid var(--blue-transparent);
+  border-radius: var(--rad-6);
+  transition: 0.5s;
 }
+.main section.right .project:hover {
+  border: 1px solid var(--blue);
+  transform: rotate(0.8deg) scale(1.01);
+}
+
 .main section.right .project img {
   width: 280px;
+  border-top-left-radius: var(--rad-6);
+  border-top-right-radius: var(--rad-6);
 }
 .main section.right .project .box {
   padding: 1rem 0.5rem 0;
@@ -106,21 +114,22 @@
   margin-top: 1rem;
   border-top: 1px solid var(--border);
 }
-.main section.right .project .links .flex a span {
+.main section.right .project .links div.flex a span {
   font-weight: bold;
   font-size: 1.3rem;
+  color: var(--subtitle);
+  transition: 0.3s;
 }
-.main section.right .project .links .flex a p {
+.main section.right .project .links div.flex .more {
+  font-size: 0.8rem;
   font-weight: bold;
-  color: red;
+  color: var(--subtitle);
+  transition: 0.3s;
+  margin-right: 0.1rem;
 }
-
-.main section.right .card .links p.more {
-}
-.main section.right .card .links span.right {
-}
-.main section.right img {
-  width: 280px;
+.main section.right .project .links div.flex .more:hover,
+.main section.right .project .links div.flex a span:hover {
+  color: var(--title);
 }
 /* 
     Media Query
