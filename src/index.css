@@ -31,6 +31,7 @@ button:disabled {
   --orange: #ff8c00;
   --title: #27272a;
   --border: #e4e4e4;
+  /* --border-transparent: #e4e4e445; */
   --card-border: #e4e4e4;
   --color: #27272a;
   --bg-header-nav: #fdfdfd;
