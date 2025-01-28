@@ -9,12 +9,12 @@ import Footer from "./components/5-footer/Footer";
 function App() {
   return (
     <div className="container">
-      <Header />
       <Routes>
         <Route
           path="/"
           element={
             <>
+              <Header />
               <Hero />
               <Main />
               <Contact />

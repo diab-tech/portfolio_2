@@ -11,6 +11,17 @@ const projects = [
     technologies: ["HTML", "CSS"],
   },
   {
+    id: 3,
+    name: "Company Page",
+    category: "Vanilla JS",
+    image: "/company-page.png",
+    link: "https://diab-tech.github.io/special-design/",
+    github: "https://github.com/diab-tech/special-design",
+    description:
+      "This web project, hosted on GitHub Pages, showcases a special design concept with a focus on creativity and visual appeal. It may highlight modern web design trends, such as: Stylized UI/UX: Engaging user interface elements like animations, hover effects, or custom layouts. Responsive Design: A layout optimized for various screen sizes, ensuring accessibility across devices. Thematic Presentation: Possibly tailored for a specific purpose, such as a product showcase, portfolio, or experimental design.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+  },
+  {
     id: 2,
     name: "Small Store",
     category: "React",
@@ -27,17 +38,6 @@ const projects = [
       "Redux Toolkit",
       "React Bootstrap",
     ],
-  },
-  {
-    id: 3,
-    name: "Company Page",
-    category: "Vanilla JS",
-    image: "/company-page.png",
-    link: "https://diab-tech.github.io/special-design/",
-    github: "https://github.com/diab-tech/special-design",
-    description:
-      "This web project, hosted on GitHub Pages, showcases a special design concept with a focus on creativity and visual appeal. It may highlight modern web design trends, such as: Stylized UI/UX: Engaging user interface elements like animations, hover effects, or custom layouts. Responsive Design: A layout optimized for various screen sizes, ensuring accessibility across devices. Thematic Presentation: Possibly tailored for a specific purpose, such as a product showcase, portfolio, or experimental design.",
-    technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];
 

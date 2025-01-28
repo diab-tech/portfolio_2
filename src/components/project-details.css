@@ -1,0 +1,58 @@
+.container .project {
+  border: 1px solid var(--border);
+  background-color: transparent;
+  margin-bottom: 2rem;
+}
+.container .project img {
+  width: 100%;
+}
+.container .project h2 {
+  color: var(--title);
+}
+.container .project p {
+  line-height: 1.5;
+  color: var(--subtitle);
+}
+.container .project .tech {
+  color: var(--title);
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+.container .project .box .technologies span {
+  color: var(--title);
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  background-color: var(--bg-technologies);
+}
+.container .project .links div a div.flex {
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0.7rem 2rem;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  transition: 0.3s;
+}
+.container .project .links div a div.flex span.icon {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 0.3rem;
+}
+.container .project .links .link a div.flex {
+  background-color: green;
+}
+.container .project .links .link a div.flex:hover {
+  background-color: rgba(0, 128, 0, 0.8);
+}
+.container .project .links .github a div.flex {
+  background-color: #0d6efd;
+}
+.container .project .links .github a div.flex:hover {
+  background-color: #055cdd;
+}

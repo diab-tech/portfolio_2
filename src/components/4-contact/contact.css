@@ -1,6 +1,6 @@
 .contact .title {
   justify-content: flex-start;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .contact .title span.mail-icon {
   margin-right: 1rem;
@@ -16,15 +16,18 @@
   line-height: 2;
   margin-bottom: 2rem;
 }
-.contact div.flex {
+.contact form div.flex {
   margin-bottom: 1.5rem;
 }
-.contact div.flex label {
+.contact form div.flex label {
   margin-right: 1rem;
   color: var(--subtitle);
 }
-.contact div.flex input,
-.contact div.flex textarea {
+.contact form div.flex label[for="name"] {
+  margin-right: 2.4rem;
+}
+.contact form div.flex input,
+.contact form div.flex textarea {
   all: unset;
   border-radius: 6px;
   padding: 0.5rem;
@@ -33,19 +36,20 @@
   transition: 0.3s;
   outline: none;
 }
-.dark-mode .contact div.flex input,
-.dark-mode .contact div.flex textarea {
+.dark-mode .contact form div.flex input,
+.dark-mode .contact form div.flex textarea {
   background-color: rgba(63, 63, 70, 0.15);
   border: 1px solid rgb(63 63 70);
 }
-.contact div.flex input:hover,
-.contact div.flex textarea:hover,
-.contact div.flex input:focus,
-.contact div.flex textarea:focus {
+.contact form div.flex input:hover,
+.contact form div.flex textarea:hover,
+.contact form div.flex input:focus,
+.contact form div.flex textarea:focus {
   border-color: var(--subtitle);
 }
-.contact div.flex textarea {
+.contact form div.flex textarea {
   height: 100px;
+  resize: vertical;
 }
 .contact form button#submit {
   padding: 0.8rem 2rem;
@@ -65,4 +69,20 @@
   background-color: #ccc;
   cursor: default;
   scale: 1;
+}
+
+/* 
+Media Query
+*/
+
+@media (max-width: 767px) {
+  .contact form div.flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact form div.flex input,
+  .contact form div.flex textarea {
+    width: 70%;
+    margin-top: 0.5rem;
+  }
 }

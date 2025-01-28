@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./main.css";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import projects from "../../Data/projectsData";
 
 export default function Main() {
@@ -49,9 +49,14 @@ export default function Main() {
     };
   }, []); // to run only once on mount
 
+  const navigate = useNavigate();
+  const handleProjectClick = (project) => {
+    navigate("/more", { state: { project } });
+  };
+
   return (
-    <div className="main flex p-relative ">
-      <section className="left flex flex-column">
+    <div id="projects" className="main flex p-relative ">
+      <section className="left flex flex-column ">
         {categories.map((category) => (
           <button
             key={category}
@@ -66,7 +71,11 @@ export default function Main() {
       </section>
       <section className="right flex ">
         {filteredProjects.map((p) => (
-          <div className="project" key={p.id}>
+          <div
+            className="project"
+            key={p.id}
+            onClick={() => handleProjectClick(p)}
+          >
             <img src={p.image} alt={p.name} />
             <div className="box p-1">
               <h2>{p.name}</h2>
@@ -87,45 +96,14 @@ export default function Main() {
                 </a>
               </div>
               <div className="flex ">
-                <Link to={"/more"} className="more">
+                <Link to={"/more"} state={{ project: p }} className="more">
                   More
                 </Link>
                 <span className="right icon-arrow-right"></span>
               </div>
             </div>
-
-            {/* <a href={p.link}>
-              <span className="icon-external-link"></span>
-              Live Demo
-            </a> */}
           </div>
         ))}
-        {/* <div className="card border">
-          <img src="/public/1.jpg" />
-          <div className="box">
-            <h3>React Project</h3>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Distinctio voluptatum atque corrupti dolore sit
-            </p>
-            <div className="links flex space-between">
-              <div className="flex">
-                <a href="https://diab-tech.github.io/Bondi/">
-                  <span className="icon-link"></span>
-                </a>
-                <a href="https://github.com/diab-tech/Bondi">
-                  <span className="icon-github"></span>
-                </a>
-              </div>
-              <div className="flex ">
-                <Link to={"/more"} className="more">
-                  More
-                </Link>
-                <span className="right icon-arrow-right"></span>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </section>
       <div className="border-line" />
     </div>

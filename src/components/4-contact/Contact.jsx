@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
 import { toast, ToastContainer } from "react-toastify";
@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 export default function Contact() {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     message: "",
   });
@@ -39,27 +40,38 @@ export default function Contact() {
         "MaM3hRHNL8Wa8YUYr"
       )
       .then(
-        (result) => {
-          console.log("Message Sent successfully!", result.text);
+        () => {
           toast.success("Message Sent successfully!");
+          console.log(formData);
         },
-        (error) => {
-          console.error("Failed to send message.", error.text);
+        () => {
           toast.error("Failed to send message! Try Again");
         }
       );
   };
   return (
-    <div className="contact p-relative pt-3 mb-3">
+    <div id="contact" className="contact p-relative pt-3 mb-3">
       <div className="title flex">
         <span className="mail-icon icon-envelope block"></span>
-        <h2>Contact Us</h2>
+        <h2>Contact Me</h2>
       </div>
       <p className="subtitle">
         Contact us for more information and Get notified when I publish
         something new.
       </p>
       <form id="contactForm" onSubmit={handleSubmit}>
+        <div className="flex justify-content-start">
+          <label htmlFor="name">Your Name: </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleInput}
+            required
+            autoComplete="name"
+          />
+        </div>
         <div className="flex justify-content-start">
           <label htmlFor="email">Email Address: </label>
           <input
@@ -69,6 +81,7 @@ export default function Contact() {
             value={formData.email}
             onChange={handleInput}
             required
+            autoComplete="email"
           />
         </div>
         <div className="flex justify-content-start">

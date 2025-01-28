@@ -11,7 +11,8 @@ header nav ul.flex {
   gap: 16px;
   padding: 10px 15px;
   border-radius: 30px;
-  box-shadow: 1px 1px 20px #1515152e;
+  box-shadow: 1px 1px 30px var(--filter-shadow),
+    inset 0px 0px 3px 0px var(--filter-shadow);
 }
 header ul li a {
   color: var(--title);
@@ -37,7 +38,8 @@ header button {
   color: var(--subtitle);
   transition: 0.2s;
 }
-header button:hover {
+header .menu:hover,
+header .toggle-mode:hover {
   border: 1.6px solid var(--orange);
   color: var(--color);
 }
@@ -87,6 +89,28 @@ header ul.modal li:not(:last-child) {
   border-bottom: 1px solid var(--border);
 }
 
+a.scroll2up {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(25, 118, 210, 0.7);
+  border-radius: 50%;
+  position: fixed;
+  right: 3%;
+  bottom: 2rem;
+  transition: 0.3s;
+  z-index: 11;
+}
+a.scroll2up:hover {
+  background-color: rgba(25, 118, 210, 1);
+  /* border: 1px solid #fff; */
+}
+a.scroll2up span {
+  color: var(--subtitle);
+}
+a.scroll2up:hover span {
+  color: var(--title);
+}
+
 /* 
   Animation
 */
@@ -110,6 +134,11 @@ header ul.modal li:not(:last-child) {
 @media (max-width: 767px) {
   header nav {
     display: none;
+  }
+  a.scroll2up {
+    right: 1.5%;
+    width: 30px;
+    height: 30px;
   }
 }
 @media (min-width: 768px) {

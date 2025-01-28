@@ -25,10 +25,7 @@ function Hero() {
         >
           <span className="icon-linkedin-square"></span>
         </a>
-        <a
-          href="mailto:https://www.linkedin.com/in/shabaan-diab-06bb0921a/"
-          target="_blank"
-        >
+        <a href="mailto:shapan.mohamed9779@gmail.com" target="_blank">
           <span className="icon-envelope"></span>
         </a>
       </div>

@@ -13,13 +13,12 @@
   position: sticky;
   top: 0;
   background-color: var(--secondary);
-  z-index: 1000;
   transition: transform 0.3s ease;
 }
 /* hide nav of filters [section.left] */
 @media (max-width: 767px) {
   .hidden-nav {
-    transform: translateY(-100%);
+    transform: translateY(-110%);
   }
 }
 .main section.left button {
@@ -68,6 +67,8 @@
   border: 1px solid var(--border);
   border-radius: var(--rad-6);
   transition: 0.5s;
+  /* transition: 0.3s; */
+  cursor: pointer;
 }
 .dark-mode .main section.right .project {
   border: 1px solid var(--blue-transparent);
@@ -112,11 +113,12 @@
   gap: 5px;
 }
 .main section.right .project .technologies span {
-  /* font-size: 20px; */
-  color: var(--color);
-  padding: 5px;
-  background-color: var(--bg-technologies);
+  color: var(--title);
+  font-weight: bold;
+  font-size: 15px;
+  padding: 0.5rem 1rem;
   border-radius: 20px;
+  background-color: var(--bg-technologies);
 }
 .main section.right .project .links {
   padding: 1rem;
@@ -155,5 +157,11 @@
     text-align: center;
     justify-content: center;
     position: sticky;
+    width: 100%;
+    z-index: 10;
+    border-radius: 5px;
+    /* box-shadow: 0px 2px 3px 0px var(--filter-shadow); */
+    box-shadow: 1px 1px 10px var(--filter-shadow),
+      inset 0px 0px 4px 0px var(--filter-shadow);
   }
 }

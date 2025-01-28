@@ -2,6 +2,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
 }
 * {
   margin: 0;
@@ -31,7 +32,8 @@ button:disabled {
   --orange: #ff8c00;
   --title: #27272a;
   --border: #e4e4e4;
-  /* --border-transparent: #e4e4e445; */
+
+  --filter-shadow: #919296;
   --card-border: #e4e4e4;
   --color: #27272a;
   --bg-header-nav: #fdfdfd;
@@ -42,6 +44,7 @@ button:disabled {
 .dark-mode {
   --primary: #000;
   --secondary: rgb(24, 24, 27);
+  --filter-shadow: rgb(93, 188, 252);
 
   --subtitle: rgb(161 161 170);
   --title: rgb(244 244 245);
@@ -74,6 +77,38 @@ body.light-mode .sun {
   border: solid 2px var(--border);
   padding: 0 1.5rem;
 }
+
+/* 
+Scrollbar
+*/
+
+::-webkit-scrollbar {
+  width: 0.88rem;
+}
+
+::-webkit-scrollbar-track {
+  /* border: 7px solid #292c3b; */
+  border-radius: 10px;
+  background-color: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--filter-shadow);
+  border-radius: 10px;
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} */
+
+/* for Firefox */
+/* html {
+  scrollbar-color: #9e4673 #3d4a59;
+} */
+
+/* 
+Media Query
+*/
 @media (max-width: 767px) {
   .container {
     width: 85%;

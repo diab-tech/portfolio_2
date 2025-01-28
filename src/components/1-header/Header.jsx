@@ -28,7 +28,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header>
+    <header id="up">
       {/* empty div to make nav in the middle of screen */}
       <button className="menu icon-menu" onClick={() => setShowMenu(true)} />
 
@@ -38,19 +38,19 @@ const Header = () => {
         {/* ul>(li>a)*5 */}
         <ul className="flex">
           <li>
-            <a href="">About</a>
+            <a href="#up">About</a>
           </li>
-          <li>
+          {/* <li>
             <a href="">Article</a>
-          </li>
+          </li> */}
           <li>
-            <a href="">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
-          <li>
+          {/* <li>
             <a href="">Speaking</a>
-          </li>
+          </li> */}
           <li>
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -67,23 +67,26 @@ const Header = () => {
               className="icon-close close"
             />
             <li>
-              <a href="">About</a>
+              <a href="#up">About</a>
             </li>
-            <li>
+            {/* <li>
               <a href="">Article</a>
-            </li>
+            </li> */}
             <li>
-              <a href="">Projects</a>
+              <a href="#projects">Projects</a>
             </li>
-            <li>
+            {/* <li>
               <a href="">Speaking</a>
-            </li>
+            </li> */}
             <li>
-              <a href="">Contact</a>
+              <a href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       )}
+      <a href="#up" className="scroll2up flex">
+        <span className="icon-keyboard_arrow_up"></span>
+      </a>
     </header>
   );
 };
