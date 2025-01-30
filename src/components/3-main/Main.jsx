@@ -81,7 +81,12 @@ export default function Main() {
             <img src={p.image} alt={p.name} />
             <div className="box p-1">
               <h2>{p.name}</h2>
-              <p className="description">{p.description}</p>
+              <p
+                className="description"
+                dangerouslySetInnerHTML={{ __html: p.description }}
+              />
+              {/* {p.description}
+              </p> */}
               <div className="technologies flex ">
                 {p.technologies.map((tech, index) => (
                   <span key={index}>{tech}</span>

@@ -17,6 +17,7 @@ export default function ProjectDetails() {
             className="description"
             dangerouslySetInnerHTML={{ __html: project.description }}
           />
+
           <div className="tech mt-2">🛠️ Technologies Used:</div>
           <div className="technologies flex flex-wrap gap-5">
             {project.technologies.map((tech, index) => (

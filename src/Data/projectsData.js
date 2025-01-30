@@ -81,9 +81,9 @@ It allows for a unique and engaging experience through its interactive features.
 
   <strong>Contact Form:</strong> An interactive form that allows visitors to reach out to me directly.
 
-  -<strong>Custom Fonts & Icons:</strong> Unique typography and icons for a personalized touch.
+  <strong>Custom Fonts & Icons:</strong> Unique typography and icons for a personalized touch.
 
-  -<strong>Dynamic Content:</strong> Easily updatable project data stored in a structured format for quick modifications.`,
+  <strong>Dynamic Content:</strong> Easily updatable project data stored in a structured format for quick modifications.`,
     technologies: [
       "HTML5",
       "CSS3",

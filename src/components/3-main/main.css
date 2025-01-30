@@ -1,3 +1,7 @@
+.main .description {
+  white-space: pre-line;
+}
+
 .main {
   gap: 2rem;
   justify-content: center;
