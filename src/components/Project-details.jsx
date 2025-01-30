@@ -11,9 +11,13 @@ export default function ProjectDetails() {
       <div className="project " key={project.id}>
         <img src={project.image} alt={project.name} />
         <div className="box p-1">
-          <h2>{project.name}</h2>
-          <p>{project.description}</p>
-          <div className="tech mt-2">Technology:</div>
+          <h2 className="mb-1">{project.name}</h2>
+          {/* makes you use html tags in jsx */}
+          <p
+            className="description"
+            dangerouslySetInnerHTML={{ __html: project.description }}
+          />
+          <div className="tech mt-2">🛠️ Technologies Used:</div>
           <div className="technologies flex flex-wrap gap-5">
             {project.technologies.map((tech, index) => (
               <span key={index}>{tech}</span>

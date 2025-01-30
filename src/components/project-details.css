@@ -1,3 +1,8 @@
+/* Makes [\n] Works */
+.container .description {
+  white-space: pre-line;
+}
+
 .container .project {
   border: 1px solid var(--border);
   background-color: transparent;
@@ -13,6 +18,10 @@
   line-height: 1.5;
   color: var(--subtitle);
 }
+.container .project p h3 {
+  color: var(--title);
+}
+
 .container .project .tech {
   color: var(--title);
   font-weight: bold;

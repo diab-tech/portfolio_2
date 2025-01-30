@@ -6,7 +6,7 @@ import projects from "../../Data/projectsData";
 export default function Main() {
   const [activeCategory, setActiveCategory] = useState("All");
   const lastScrollY = useRef(null);
-  const categories = ["All", "HTML & CSS", "Vanilla JS", "React"];
+  const categories = ["All", "HTML & CSS", "Vanilla JS", "TypeScript", "React"];
 
   // Create Filter Buttons
   const handleBtnClick = (category) => {
@@ -17,8 +17,10 @@ export default function Main() {
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter(
-          (p) => p.category.toLowerCase() === activeCategory.toLowerCase()
+      : projects.filter((p) =>
+          p.category.some(
+            (e) => e.toLowerCase() === activeCategory.toLowerCase()
+          )
         );
 
   // Hide Nav On Small Screen
@@ -79,7 +81,7 @@ export default function Main() {
             <img src={p.image} alt={p.name} />
             <div className="box p-1">
               <h2>{p.name}</h2>
-              <p>{p.description}</p>
+              <p className="description">{p.description}</p>
               <div className="technologies flex ">
                 {p.technologies.map((tech, index) => (
                   <span key={index}>{tech}</span>
