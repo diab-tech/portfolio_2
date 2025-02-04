@@ -6,21 +6,29 @@ function Hero() {
   return (
     <div className="hero p-relative flex space-between border-bottom">
       <div className="info">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          className="image"
-        >
-          <img src="/photo_2024-12-13_21-53-18-modified.png" />
+        <div className="image">
+          <motion.img
+            initial={{ transform: "scale(0)" }}
+            animate={{ transform: "scale(1.1)" }}
+            transition={{ damping: 6, type: "spring", stiffness: 100 }}
+            src="/photo_2024-12-13_21-53-18-modified.png"
+          />
           <span className="verified icon-verified"></span>
-        </motion.div>
-        <h1>
+        </div>
+        <motion.h1
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 4 }}
+        >
           Front-End Developer <br /> Creating Exceptional Web Experiences
-        </h1>
+        </motion.h1>
         <p>
-          I’m <span className="name">Shaban Diab</span>, a Front-End Developer
-          passionate about crafting intuitive and dynamic web applications with
-          a focus on user experience and modern design.
+          Hi, I’m <span className="name">Shaban Diab</span>, a Front-End
+          Developer passionate about crafting intuitive and dynamic web
+          applications using modern technologies like React and JavaScript. With
+          a strong focus on user experience and innovative design, I strive to
+          create seamless and engaging digital experiences that leave a lasting
+          impression.
         </p>
         <div className="social-icon p-relative">
           <a href="https://github.com/diab-tech" target="_blank">
