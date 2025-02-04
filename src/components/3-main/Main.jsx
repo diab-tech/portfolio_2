@@ -35,7 +35,7 @@ export default function Main() {
     }
 
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY.current && window.scrollY > 720) {
+      if (window.scrollY > lastScrollY.current && window.scrollY > 700) {
         // Scroll Down
         nav.classList.add("hidden-nav");
       } else {
@@ -80,14 +80,6 @@ export default function Main() {
           {filteredProjects.map((p) => (
             <motion.div
               key={p.id}
-              // initial={{ scale: 1, opacity: 1 }}
-              // animate={
-              //   clickedProjectId === p.id
-              //     ? { scale: 5, opacity: 0.3 }
-              //     : { opacity: clickedProjectId ? 0.3 : 0.8 }
-              // }
-              // transition={{ duration: 0.5, ease: "easeInOut" }}
-
               initial={{ opacity: 0, y: 50, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -50, scale: 0.8 }}

@@ -7,9 +7,6 @@
 .name:hover {
   text-shadow: 0 0 20px rgba(254, 180, 123, 5);
 }
-.hero .info {
-  max-width: 70%;
-}
 .hero .animation {
   margin-bottom: -90px;
   margin-right: -25px;
@@ -27,7 +24,6 @@
   color: #5dbcfc;
 }
 .hero h1 {
-  font-size: 40px;
   margin-top: 30px;
   margin-bottom: 20px;
   color: var(--title);
@@ -35,7 +31,7 @@
 .hero p {
   color: var(--subtitle);
   line-height: 1.7;
-  /* max-width: 80%; */
+  max-width: 100%;
 }
 .hero .social-icon {
   display: flex;
@@ -57,7 +53,15 @@
 }
 
 @media (max-width: 991px) {
+  .hero {
+    display: block;
+  }
   .hero .animation {
     display: none;
+  }
+}
+@media (min-width: 992px) {
+  .hero .info {
+    max-width: 70%;
   }
 }
