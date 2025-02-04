@@ -44,32 +44,32 @@ It allows for a unique and engaging experience through its interactive features.
 
  <strong>Minimalist:</strong> A clean and user-friendly interface focused on functionality and customization.
 `,
-    technologies: ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML5", "CSS3", "JavaScript"],
   },
-  {
-    id: 3,
-    name: "Small Store (Under Development)",
-    category: ["React"],
-    image: "/small-store.png",
-    link: "https://my-first-domain-v2.netlify.app/",
-    github: "https://github.com/diab-tech/my-first-domain",
-    description:
-      "This is a simple and cleanly designed web application hosted on Netlify, possibly created as a learning project. The website likely demonstrates basic front-end web development skills, such as HTML, CSS, and JavaScript, and could include features like Home Page with introductory content.Basic navigation and layout for showcasing different sections.Interactive elements or components (e.g., buttons, forms, or animations)",
-    technologies: [
-      "HTML5",
-      "CSS3",
-      "JavaScript",
-      "React",
-      "Redux Toolkit",
-      "React Bootstrap",
-    ],
-  },
+  // {
+  //   id: 3,
+  //   name: "Small Store (Under Development)",
+  //   category: ["React"],
+  //   image: "/small-store.png",
+  //   link: "https://my-first-domain-v2.netlify.app/",
+  //   github: "https://github.com/diab-tech/my-first-domain",
+  //   description:
+  //     "This is a simple and cleanly designed web application hosted on Netlify, possibly created as a learning project. The website likely demonstrates basic front-end web development skills, such as HTML, CSS, and JavaScript, and could include features like Home Page with introductory content.Basic navigation and layout for showcasing different sections.Interactive elements or components (e.g., buttons, forms, or animations)",
+  //   technologies: [
+  //     "HTML5",
+  //     "CSS3",
+  //     "JavaScript",
+  //     "React",
+  //     "Redux Toolkit",
+  //     "React Bootstrap",
+  //   ],
+  // },
   {
     id: 4,
     name: "My Portfolio",
     category: ["TypeScript", "React"],
     image: "/portfolio.png",
-    link: "https://polite-druid-d2ab23.netlify.app/",
+    link: "https://diab-portfolio.netlify.app/",
     github: "https://github.com/diab-tech/my-portfolio",
     description: `<strong>Welcome</strong> to my personal portfolio!\nThis project is a showcase of my skills, projects,and experiences as a developer. \nIt’s designed to reflect my creativity, technical expertise, and passion for building meaningful and user-friendly applications.\n
  <h3>✨Features✨</h3> 
@@ -90,10 +90,9 @@ It allows for a unique and engaging experience through its interactive features.
       "JavaScript",
       "TypeScript",
       "React",
-      "Vite",
       "TailwindCSS",
-      "ESLint",
     ],
+    tools: ["Vite", "ESLint"],
   },
 ];
 

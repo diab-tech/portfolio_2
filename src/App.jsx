@@ -16,8 +16,13 @@ function App() {
             <>
               <Header />
               <Hero />
+              <div className="border-line"></div>
               <Main />
+              <div className="border-line"></div>
+
               <Contact />
+              <div className="border-line"></div>
+
               <Footer />
             </>
           }

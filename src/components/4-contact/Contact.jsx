@@ -1,9 +1,13 @@
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
+import Animation from "./Animation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+
 export default function Contact() {
+  const [speed, setSpeed] = useState(1);
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
@@ -50,7 +54,7 @@ export default function Contact() {
       );
   };
   return (
-    <div id="contact" className="contact p-relative pt-3 mb-3">
+    <div id="contact" className="contact p-relative mb-3">
       <div className="title flex">
         <span className="mail-icon icon-envelope block"></span>
         <h2>Contact Me</h2>
@@ -59,47 +63,51 @@ export default function Contact() {
         Contact us for more information and Get notified when I publish
         something new.
       </p>
-      <form id="contactForm" onSubmit={handleSubmit}>
-        <div className="flex justify-content-start">
-          <label htmlFor="name">Your Name: </label>
-          <input
-            id="name"
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleInput}
-            required
-            autoComplete="name"
-          />
+      <form className="flex" id="contactForm" onSubmit={handleSubmit}>
+        <div className="contact">
+          <div className="flex justify-content-start">
+            <label htmlFor="name">Your Name: </label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              value={formData.name}
+              onChange={handleInput}
+              required
+              autoComplete="name"
+            />
+          </div>
+          <div className="flex justify-content-start">
+            <label htmlFor="email">Email Address: </label>
+            <input
+              id="email"
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInput}
+              required
+              autoComplete="email"
+            />
+          </div>
+          <div className="flex justify-content-start">
+            <label htmlFor="message">Your Message: </label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleInput}
+              required
+            ></textarea>
+          </div>
+          <button id="submit" type="submit" disabled={isSubmitDisabled}>
+            Submit
+          </button>
         </div>
-        <div className="flex justify-content-start">
-          <label htmlFor="email">Email Address: </label>
-          <input
-            id="email"
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInput}
-            required
-            autoComplete="email"
-          />
+        <div className="animation">
+          <Animation />
         </div>
-        <div className="flex justify-content-start">
-          <label htmlFor="message">Your Message: </label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleInput}
-            required
-          ></textarea>
-        </div>
-        <button id="submit" type="submit" disabled={isSubmitDisabled}>
-          Submit
-        </button>
       </form>
       <ToastContainer />
-      <div className="border-line" />
     </div>
   );
 }

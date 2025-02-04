@@ -1,3 +1,20 @@
+.name {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+.name:hover {
+  text-shadow: 0 0 20px rgba(254, 180, 123, 5);
+}
+.hero .info {
+  max-width: 70%;
+}
+.hero .animation {
+  margin-bottom: -90px;
+  margin-right: -25px;
+}
+
 .hero .image img {
   width: 100px;
   height: 100px;
@@ -18,13 +35,14 @@
 .hero p {
   color: var(--subtitle);
   line-height: 1.7;
+  /* max-width: 80%; */
 }
 .hero .social-icon {
   display: flex;
   align-items: center;
   position: relative;
   margin-top: 30px;
-  margin-bottom: 75px;
+  /* margin-bottom: 75px; */
 }
 
 .hero .social-icon a:not(:last-child) {
@@ -36,4 +54,10 @@
 }
 .hero .social-icon span:hover {
   color: var(--title);
+}
+
+@media (max-width: 991px) {
+  .hero .animation {
+    display: none;
+  }
 }

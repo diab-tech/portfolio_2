@@ -43,6 +43,9 @@ header .toggle-mode:hover {
   border: 1.6px solid var(--orange);
   color: var(--color);
 }
+header .icon-sun {
+  color: var(--orange);
+}
 
 /* 
   overlay
@@ -53,7 +56,7 @@ header .toggle-mode:hover {
 header .overlay {
   inset: 0;
   position: fixed;
-  z-index: 10;
+  z-index: 100;
   background-color: rgba(40, 40, 48, 0.95);
   backdrop-filter: blur(2px);
 }
@@ -97,7 +100,8 @@ a.scroll2up {
   position: fixed;
   right: 3%;
   bottom: 2rem;
-  transition: 0.3s;
+  transition: opacity 1s ease, background-color 0.3s ease;
+  opacity: 0;
   z-index: 11;
 }
 a.scroll2up:hover {
@@ -109,6 +113,12 @@ a.scroll2up span {
 }
 a.scroll2up:hover span {
   color: var(--title);
+}
+a.scroll2up.show {
+  opacity: 1;
+}
+a.scroll2up.hide {
+  opacity: 0;
 }
 
 /* 

@@ -16,6 +16,9 @@
   line-height: 2;
   margin-bottom: 2rem;
 }
+.contact form .contact {
+  flex: 1;
+}
 .contact form div.flex {
   margin-bottom: 1.5rem;
 }
@@ -70,6 +73,13 @@
   cursor: default;
   scale: 1;
 }
+/* .contact form .animation .lottie {
+  width: 355px;
+  height: 355px;
+  image-rendering: optimizeQuality;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* تحسين العرض */
+/* }  */
 
 /* 
 Media Query
@@ -84,5 +94,10 @@ Media Query
   .contact form div.flex textarea {
     width: 70%;
     margin-top: 0.5rem;
+  }
+}
+@media (max-width: 1000px) {
+  .contact form .animation {
+    display: none;
   }
 }

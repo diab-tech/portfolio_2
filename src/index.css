@@ -40,6 +40,7 @@ button:disabled {
   --bg-technologies: #eaeaea;
   /*  */
   --rad-6: 6px;
+  --container-padding: 1.5rem;
 }
 .dark-mode {
   --primary: #000;
@@ -58,6 +59,7 @@ button:disabled {
 body {
   background-color: var(--primary);
   color: var(--title);
+  font-size: 16px;
 }
 body .moon,
 .sun {
@@ -71,11 +73,17 @@ body.light-mode .sun {
 }
 .container {
   width: 80%;
-  margin: 0 auto;
+  margin: 2px auto;
   background-color: var(--secondary);
   color: var(--title);
   border: solid 2px var(--border);
-  padding: 0 1.5rem;
+  padding-inline: var(--container-padding);
+}
+.border-line {
+  width: calc(100% + var(--container-padding) + var(--container-padding));
+  border-bottom: 1px solid var(--border);
+  margin: 3rem 0;
+  margin-left: calc(var(--container-padding) * -1);
 }
 
 /* 
@@ -85,53 +93,45 @@ Scrollbar
 ::-webkit-scrollbar {
   width: 0.88rem;
 }
-
 ::-webkit-scrollbar-track {
   /* border: 7px solid #292c3b; */
   border-radius: 10px;
   background-color: var(--primary);
 }
-
 ::-webkit-scrollbar-thumb {
   background: var(--filter-shadow);
   border-radius: 10px;
 }
-
-/* ::-webkit-scrollbar-thumb:hover {
-  background: #555;
-} */
-
-/* for Firefox */
-/* html {
-  scrollbar-color: #9e4673 #3d4a59;
-} */
 
 /* 
 Media Query
 */
 @media (max-width: 767px) {
   .container {
+    --container-padding: 1rem;
     width: 85%;
-    padding: 0 1rem;
+    padding-inline: var(--container-padding);
+  }
+  .border-line {
+    width: var(100% + var(--container-padding) + var(--container-padding));
+    margin-left: calc(var(--container-padding) * -1);
   }
 }
 @media (min-width: 1199px) {
   .container {
+    --container-padding: 3rem;
+
     width: 70%;
-    padding: 0 2rem;
+    padding-inline: var(--container-padding);
+  }
+  .border-line {
+    width: var(100% + var(--container-padding) + var(--container-padding));
+    margin-left: calc(var(--container-padding) * -1);
   }
 }
-.border-line {
-  position: absolute;
-  width: calc(100% + 3rem);
-  border-bottom: 1px solid var(--border);
-  margin: 2rem 0;
-  top: 100%;
-  left: -1.5rem;
-}
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .border-line {
     width: calc(100% + 2rem);
     left: -1rem;
   }
-}
+} */
