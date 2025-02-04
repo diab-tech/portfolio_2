@@ -66,3 +66,9 @@
 .container-2 .project .links .github a div.flex:hover {
   background-color: #055cdd;
 }
+@media (max-width: 767px) {
+  .container-2 .project .links div a div.flex {
+    font-size: 0.75rem;
+    padding: 0.6rem 1.9rem;
+  }
+}
