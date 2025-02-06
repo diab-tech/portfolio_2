@@ -87,18 +87,13 @@ export default function Main() {
               className="project"
               onClick={() => handleProjectClick(p)}
             >
-              <img src={p.image} alt={p.name} />
+              <img src={p.image} alt={p.name} loading="lazy" />
               <div className="box p-1">
                 <h2>{p.name}</h2>
                 <p
                   className="description"
                   dangerouslySetInnerHTML={{ __html: p.description }}
                 />
-                {/* <div className="technologies flex ">
-                  {p.technologies.slice(0, 3).map((tech, index) => (
-                    <span key={index}>{tech}</span>
-                  ))}
-                </div> */}
               </div>
               <div className="links flex space-between ">
                 <div className="flex gap-10">

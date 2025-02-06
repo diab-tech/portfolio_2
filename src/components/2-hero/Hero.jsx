@@ -11,7 +11,9 @@ function Hero() {
             initial={{ transform: "scale(0)" }}
             animate={{ transform: "scale(1.1)" }}
             transition={{ damping: 6, type: "spring", stiffness: 100 }}
-            src="/photo_2024-12-13_21-53-18-modified.png"
+            src="/photo_2024-12-13_21-53-18-modified.webp"
+            loading="lazy"
+            alt="My Photo"
           />
           <span className="verified icon-verified"></span>
         </div>

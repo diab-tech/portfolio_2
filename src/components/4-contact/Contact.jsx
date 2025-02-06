@@ -4,10 +4,8 @@ import "./contact.css";
 import Animation from "./Animation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 
 export default function Contact() {
-  const [speed, setSpeed] = useState(1);
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
   const [formData, setFormData] = useState({
     name: "",
@@ -107,7 +105,7 @@ export default function Contact() {
           <Animation />
         </div>
       </form>
-      <ToastContainer />
+      <ToastContainer aria-label="Notifications" />
     </div>
   );
 }

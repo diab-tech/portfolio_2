@@ -4,7 +4,7 @@ const projects = [
     id: 1,
     name: "Bondi",
     category: ["html & css"],
-    image: "/bondi.png",
+    image: "/bondi.webp",
     link: "https://diab-tech.github.io/Bondi/",
     github: "https://github.com/diab-tech/Bondi",
     description: `<strong>Bondi</strong> - Modern & Stylish Website 🌐\n Bondi is a sleek and responsive website designed with a modern aesthetic.
@@ -27,7 +27,7 @@ The project is built using the latest front-end technologies to ensure high perf
     id: 2,
     name: "Special Design",
     category: ["Vanilla JS"],
-    image: "/company-page.png",
+    image: "/company-page.webp",
     link: "https://diab-tech.github.io/special-design/",
     github: "https://github.com/diab-tech/special-design",
     description: `<strong>Special Design</strong> - Customizable Design for Personalization 🎨
@@ -68,7 +68,7 @@ It allows for a unique and engaging experience through its interactive features.
     id: 4,
     name: "My Portfolio",
     category: ["TypeScript", "React"],
-    image: "/portfolio.png",
+    image: "/portfolio.webp",
     link: "https://diab-portfolio.netlify.app/",
     github: "https://github.com/diab-tech/my-portfolio",
     description: `<strong>Welcome</strong> to my personal portfolio!\nThis project is a showcase of my skills, projects,and experiences as a developer. \nIt’s designed to reflect my creativity, technical expertise, and passion for building meaningful and user-friendly applications.\n
