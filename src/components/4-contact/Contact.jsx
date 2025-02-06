@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
-import Animation from "./Animation";
+import Animation from "./Contact-Animation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 

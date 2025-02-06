@@ -1,6 +1,6 @@
 import "./hero.css";
 import { motion } from "motion/react";
-import Animation from "./Animation";
+import Animation from "./Hero-Animation";
 function Hero() {
   return (
     <div className="hero p-relative flex space-between border-bottom">
