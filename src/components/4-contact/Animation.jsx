@@ -10,7 +10,7 @@ export default function Animation() {
       onMouseLeave={() => setSpeed(1)} // العودة للسرعة الطبيعية
     >
       <DotLottieReact
-        src="../../../src/animation/contact.json"
+        src="../../animation/contact.json"
         loop
         autoplay
         speed={speed}

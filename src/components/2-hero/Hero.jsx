@@ -1,6 +1,5 @@
-import React from "react";
 import "./hero.css";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import Animation from "./Animation";
 function Hero() {
   return (

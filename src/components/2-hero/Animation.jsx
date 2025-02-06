@@ -10,7 +10,7 @@ export default function Animation() {
       onMouseLeave={() => setSpeed(0.4)} // العودة للسرعة الطبيعية
     >
       <DotLottieReact
-        src="../../../src/animation/Heder-Animation.json"
+        src="../../animation/Heder-Animation.json"
         loop
         autoplay
         speed={speed}
