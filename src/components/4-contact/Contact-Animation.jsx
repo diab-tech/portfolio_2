@@ -1,7 +1,7 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import { useState } from "react";
 
-export default function Animation() {
+export default function ContactAnimation() {
   const [speed, setSpeed] = useState(1);
 
   return (
@@ -10,7 +10,7 @@ export default function Animation() {
       onMouseLeave={() => setSpeed(1)} // العودة للسرعة الطبيعية
     >
       <DotLottieReact
-        src="/public/animation/contact.lottie"
+        src="/animation/contact.lottie"
         loop
         autoplay
         speed={speed}

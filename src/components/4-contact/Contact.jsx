@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import "./contact.css";
-import Animation from "./Contact-Animation";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import ContactAnimation from "./Contact-Animation";
 
 export default function Contact() {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(true);
@@ -102,7 +102,7 @@ export default function Contact() {
           </button>
         </div>
         <div className="animation">
-          <Animation />
+          <ContactAnimation />
         </div>
       </form>
       <ToastContainer aria-label="Notifications" />
