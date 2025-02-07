@@ -16,13 +16,9 @@ function Hero() {
           />
           <span className="verified icon-verified"></span>
         </div>
-        <motion.h1
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 4 }}
-        >
+        <h1>
           Front-End Developer <br /> Creating Exceptional Web Experiences
-        </motion.h1>
+        </h1>
         <p>
           Hi, I’m <span className="name">Shaban Diab</span>, a Front-End
           Developer passionate about crafting intuitive and dynamic web

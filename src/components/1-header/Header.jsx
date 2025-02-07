@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./header.css";
-import { useState } from "react";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -17,7 +16,7 @@ const Header = () => {
     // Define the toggle function
     const toggleMode = () => {
       const isDark = document.body.classList.toggle("dark-mode");
-      document.body.classList.toggle("light-mode",!isDark);
+      document.body.classList.toggle("light-mode", !isDark);
 
       window.localStorage.setItem("mode", document.body.className);
     };
@@ -26,7 +25,6 @@ const Header = () => {
       // Add the event listener
       modeBtn.addEventListener("click", toggleMode);
     }
-
 
     // cleaner
     return () => {
@@ -67,11 +65,14 @@ const Header = () => {
   return (
     <header id="up">
       {/* empty div to make nav in the middle of screen */}
-      <button className="menu icon-menu" onClick={() => {
-        setShowMenu(true);
-        // Prevent Scroll
-        document.body.style.overflow = "hidden";
-       }} />
+      <button
+        className="menu icon-menu"
+        onClick={() => {
+          setShowMenu(true);
+          // Prevent PageScroll
+          document.body.style.overflow = "hidden";
+        }}
+      />
 
       <div />
 
@@ -107,7 +108,6 @@ const Header = () => {
               onClick={() => {
                 setShowMenu(false);
                 document.body.style.overflow = "auto";
-              
               }}
               className="icon-close close"
             />

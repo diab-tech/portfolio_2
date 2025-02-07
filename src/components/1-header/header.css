@@ -46,6 +46,16 @@ header .toggle-mode:hover {
 header .icon-sun {
   color: var(--orange);
 }
+body .moon,
+.sun {
+  display: none;
+}
+body.dark-mode .moon {
+  display: inline-block;
+}
+body.light-mode .sun {
+  display: inline-block;
+}
 
 /* 
   overlay
@@ -77,7 +87,7 @@ header ul.modal button.close {
   right: 1rem;
   top: 0.5rem;
 }
-header ul.modal button:hover {
+header ul.modal button.close:hover {
   font-weight: 900;
   color: red;
   rotate: 180deg;

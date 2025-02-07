@@ -70,16 +70,6 @@ body {
   font-size: 16px;
   font-family: "Roboto", sans-serif;
 }
-body .moon,
-.sun {
-  display: none;
-}
-body.dark-mode .moon {
-  display: inline-block;
-}
-body.light-mode .sun {
-  display: inline-block;
-}
 .container {
   width: 80%;
   margin: 2px auto;
