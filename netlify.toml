@@ -1,6 +1,6 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    Content-Encoding = "gzip"  
-    Cache-Control = "max-age=31536000"  # 
-    Vary = "Accept-Encoding"  
+  Content-Encoding = "gzip"
+  Cache-Control = "public, max-age=31536000, immutable"
+  Vary = "Accept-Encoding"
