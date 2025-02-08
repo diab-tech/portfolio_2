@@ -1,8 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import "./main.css";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import projects from "../../Data/projectsData";
+import Card from "./ProjectCard.jsx";
+import { AnimatePresence } from "motion/react";
 
 export default function Main() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -54,11 +55,14 @@ export default function Main() {
   }, []); // to run only once on mount
 
   const navigate = useNavigate();
-  const handleProjectClick = (project) => {
-    setClickedProjectId(project.id);
+  const handleProjectClick = useCallback(
+    (project) => {
+      setClickedProjectId(project.id);
 
-    navigate("/more", { state: { project } });
-  };
+      navigate("/more", { state: { project } });
+    },
+    [navigate]
+  );
 
   return (
     <div id="projects" className="main flex p-relative ">
@@ -78,40 +82,11 @@ export default function Main() {
       <section className="right ">
         <AnimatePresence>
           {filteredProjects.map((p) => (
-            <motion.div
+            <Card
               key={p.id}
-              initial={{ opacity: 0, y: 50, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -50, scale: 0.8 }}
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-              className="project"
-              onClick={() => handleProjectClick(p)}
-            >
-              <img src={p.image} alt={p.name} loading="lazy" />
-              <div className="box p-1">
-                <h2>{p.name}</h2>
-                <p
-                  className="description"
-                  dangerouslySetInnerHTML={{ __html: p.description }}
-                />
-              </div>
-              <div className="links flex space-between ">
-                <div className="flex gap-10">
-                  <a href={p.link}>
-                    <span className="icon-link"></span>
-                  </a>
-                  <a href={p.github}>
-                    <span className="icon-github"></span>
-                  </a>
-                </div>
-                <div className="flex ">
-                  <Link to={"/more"} state={{ project: p }} className="more">
-                    More
-                  </Link>
-                  <span className="right icon-arrow-right"></span>
-                </div>
-              </div>
-            </motion.div>
+              project={p}
+              handleProjectClick={handleProjectClick}
+            />
           ))}
         </AnimatePresence>
       </section>

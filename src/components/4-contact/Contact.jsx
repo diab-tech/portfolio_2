@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import { lazy, Suspense } from "react"; //dynamic import jsx component
+const ToastContainer = lazy(() =>
+  import("react-toastify").then((mod) => ({ default: mod.ToastContainer }))
+);
 import emailjs from "emailjs-com";
 import "./contact.css";
-import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ContactAnimation from "./Contact-Animation";
 
@@ -31,25 +34,33 @@ export default function Contact() {
   }, [formData]);
 
   // Handle Submit
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    const showToast = async (type, message) => {
+      // {toast} => Object Destructuring
+      const { toast } = await import("react-toastify");
+
+      const toastTypes = {
+        success: toast.success,
+        error: toast.error,
+        info: toast.info,
+        warning: toast.warning,
+      };
+
+      (toastTypes[type] || toast.info)(message);
+    };
+    try {
+      await emailjs.sendForm(
         "service_qqidy05",
         "template_koyx16u",
         e.target,
         "MaM3hRHNL8Wa8YUYr"
-      )
-      .then(
-        () => {
-          toast.success("Message Sent successfully!");
-          console.log(formData);
-        },
-        () => {
-          toast.error("Failed to send message! Try Again");
-        }
       );
+      showToast("success", "Message sent successfully!");
+    } catch {
+      showToast("error", "Failed to send message! Try Again!");
+    }
   };
   return (
     <div id="contact" className="contact p-relative mb-3">
@@ -105,7 +116,9 @@ export default function Contact() {
           <ContactAnimation />
         </div>
       </form>
-      <ToastContainer aria-label="Notifications" />
+      <Suspense fallback={<div>Sending...</div>}>
+        <ToastContainer aria-label="Notifications" />
+      </Suspense>
     </div>
   );
 }

@@ -27,3 +27,6 @@ dist-ssr
 
 # Ignore the file "i-learned"
 i-learned.js
+
+# Local Netlify folder
+.netlify
