@@ -32,29 +32,26 @@ button:disabled {
 }
 
 :root {
-  --primary: rgb(250, 250, 250);
-  --secondary: rgb(255, 255, 255);
-
   --icon-hover: #d4d4d8;
-  --subtitle: rgb(82 82 91);
   --orange: #ff8c00;
+  --rad-6: 6px;
+  --container-padding: 1.5rem;
+}
+.light-mode {
+  --secondary: rgb(255, 255, 255);
+  --primary: rgb(250, 250, 250);
   --title: #27272a;
+  --subtitle: rgb(82 82 91);
   --border: #e4e4e4;
-
-  --filter-shadow: #919296;
-  --card-border: #e4e4e4;
   --color: #27272a;
   --bg-header-nav: #fdfdfd;
   --bg-technologies: #eaeaea;
-  /*  */
-  --rad-6: 6px;
-  --container-padding: 1.5rem;
+  --filter-shadow: rgb(161 161 170);
 }
 .dark-mode {
   --primary: #000;
   --secondary: rgb(24, 24, 27);
   --filter-shadow: rgb(93, 188, 252);
-
   --subtitle: rgb(161 161 170);
   --title: rgb(244 244 245);
   --border: rgba(63, 63, 70, 0.4);

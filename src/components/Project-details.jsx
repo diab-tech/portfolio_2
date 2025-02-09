@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import "./project-details.css";
 import { motion } from "motion/react";
+import DOMPurify from "dompurify";
 
 export default function ProjectDetails() {
   const location = useLocation();
   const { project } = location.state;
-
+  const sanitizedDescription = DOMPurify.sanitize(project.description);
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -18,14 +19,14 @@ export default function ProjectDetails() {
 
   return (
     <div className="container-2 mt-2">
-      <div className="project " key={project.id}>
+      <div className="project" key={project.id}>
         <img src={project.image} alt={project.name} loading="lazy" />
         <div className="box p-1">
           <h2 className="mb-1">{project.name}</h2>
           {/* makes you use html tags in jsx */}
           <p
             className="description"
-            dangerouslySetInnerHTML={{ __html: project.description }}
+            dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
           />
 
           <h3 className="tech mt-2"> Technologies:</h3>

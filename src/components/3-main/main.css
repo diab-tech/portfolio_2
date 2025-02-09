@@ -1,6 +1,6 @@
 .main {
+  display: flex;
   gap: 3rem;
-  justify-content: center;
   align-items: flex-start;
   margin-bottom: 2rem;
 }
@@ -9,13 +9,14 @@
 */
 
 .main section.left {
+  display: flex;
   gap: 15px;
   position: sticky;
   top: 0;
   background-color: var(--secondary);
   transition: transform 0.3s ease;
 }
-.main section.left button {
+.main section.left .filterBtn {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: rgba(36, 37, 46, 1);
   width: 11rem;
@@ -28,11 +29,11 @@
   transition: 0.4s;
   font-weight: 600;
 }
-.main section.left button:hover {
+.main section.left .filterBtn:hover {
   opacity: 1;
   box-shadow: 1px 1px 7px var(--filter-shadow);
 }
-.main section.left button.active {
+.main section.left .filterBtn.active {
   border: 2px solid var(--blue);
   opacity: 1;
   box-shadow: 1px 1px 10px var(--filter-shadow);
@@ -41,100 +42,12 @@
     Right Section
 */
 .main section.right {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px; */
   display: flex;
   flex-grow: 1;
-  min-width: 200px;
   gap: 20px;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-}
-.main section.right .project {
-  width: 280px;
-  border: 1px solid var(--border);
-  border-radius: var(--rad-6);
-  transition: 0.5s;
-  cursor: pointer;
-}
-.dark-mode .main section.right .project {
-  border: 1px solid var(--blue-transparent);
-}
-.main section.right .project:hover {
-  border: 1px solid var(--subtitle);
-  transform: scale(1.01);
-  box-shadow: 1px 1px 10px var(--filter-shadow);
-}
-.dark-mode .main section.right .project:hover {
-  border: 1px solid var(--blue);
-}
-.main section.right .project img {
-  width: 280px;
-  height: 190px;
-  border-top-left-radius: var(--rad-6);
-  border-top-right-radius: var(--rad-6);
-}
-.main section.right .project .box {
-  padding: 1rem 0.5rem 0;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.main section.right .project .box p {
-  margin: 0.7rem 0;
-  color: var(--subtitle);
-  font-size: 0.9rem;
-  line-height: 1.4rem;
-  width: 260px;
-  overflow: hidden;
-
-  /* makes \n && spaces works in react */
-  white-space: pre-line;
-
-  /* ===-webkit-browsers=== */
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* إظهار سطرين فقط */
-  text-overflow: ellipsis; /* إضافة النقاط في النهاية */
-
-  /* ====For non-webkit-browsers ==== */
-  /* تحديد ارتفاع العنصر ليشمل سطرين فقط */
-  max-height: calc(1.4rem * 3);
-}
-.main section.right .project .technologies {
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.main section.right .project .technologies span {
-  color: var(--title);
-  font-weight: bold;
-  font-size: 0.8rem;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  background-color: var(--bg-technologies);
-}
-.main section.right .project .links {
-  padding: 1rem;
-  margin-top: 1rem;
-  border-top: 1px solid var(--border);
-}
-.main section.right .project .links div.flex a span {
-  font-weight: bold;
-  font-size: 1.3rem;
-  color: var(--subtitle);
-  transition: 0.3s;
-}
-.main section.right .project .links div.flex .more {
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: var(--subtitle);
-  transition: 0.3s;
-  margin-right: 0.1rem;
-}
-.main section.right .project .links div.flex .more:hover,
-.main section.right .project .links div.flex a span:hover {
-  color: var(--title);
 }
 /* 
     Media Query
@@ -147,16 +60,15 @@
   .main section.left {
     flex-direction: row;
     flex-wrap: wrap;
-    text-align: center;
     justify-content: center;
     width: 100%;
     z-index: 10;
     border-radius: 5px;
     box-shadow: 1px 1px 10px var(--filter-shadow),
       inset 0px 0px 4px 0px var(--filter-shadow);
-    padding: 1rem;
+    padding: 1rem 0;
   }
-  .main section.left button {
+  .main section.left .filterBtn {
     width: fit-content;
     padding: 10px;
   }

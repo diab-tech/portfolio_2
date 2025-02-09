@@ -65,8 +65,8 @@ export default function Main() {
   );
 
   return (
-    <div id="projects" className="main flex p-relative ">
-      <section className="left flex flex-column ">
+    <div id="projects" className="main ">
+      <section className="left flex-column">
         {categories.map((category) => (
           <button
             key={category}
@@ -79,8 +79,8 @@ export default function Main() {
           </button>
         ))}
       </section>
-      <section className="right ">
-        <AnimatePresence>
+      <section className="right">
+        <AnimatePresence mode="sync">
           {filteredProjects.map((p) => (
             <Card
               key={p.id}
