@@ -36,7 +36,7 @@ export default function Main() {
     }
 
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY.current && window.scrollY > 720) {
+      if (window.scrollY > lastScrollY.current && window.scrollY > 770) {
         // Scroll Down
         nav.classList.add("hidden-nav");
       } else {
