@@ -158,7 +158,7 @@ a.scroll2up.hide {
   a.scroll2up {
     right: 1.5%;
     width: 35px;
-    height: 305px;
+    height: 35px;
   }
 }
 @media (min-width: 768px) {
