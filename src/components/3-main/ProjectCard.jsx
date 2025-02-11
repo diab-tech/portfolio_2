@@ -51,6 +51,6 @@ Card.propTypes = {
   handleProjectClick: PropTypes.func.isRequired,
 };
 
-Card.displayName = "ProjectCard"; // إصلاح التحذير حول display name
+Card.displayName = "ProjectCard";
 
-export default memo(Card); // ✅ تمرير المكون بعد تعريف propTypes
+export default memo(Card);
