@@ -80,15 +80,15 @@ export default function Main() {
         ))}
       </section>
       <section className="right">
-        <AnimatePresence mode="sync">
-          {filteredProjects.map((p) => (
-            <Card
-              key={p.id}
-              project={p}
-              handleProjectClick={handleProjectClick}
-            />
-          ))}
-        </AnimatePresence>
+        {/* <AnimatePresence mode="sync"> */}
+        {filteredProjects.map((p) => (
+          <Card
+            key={p.id}
+            project={p}
+            handleProjectClick={handleProjectClick}
+          />
+        ))}
+        {/* </AnimatePresence> */}
       </section>
     </div>
   );

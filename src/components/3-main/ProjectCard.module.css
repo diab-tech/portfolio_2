@@ -23,6 +23,7 @@
   height: 190px;
   border-top-left-radius: var(--rad-6);
   border-top-right-radius: var(--rad-6);
+  object-fit: cover;
 }
 .box {
   padding: 1rem 0.5rem 0;
@@ -68,21 +69,13 @@
   border-top: 1px solid var(--border);
 }
 .project .links .icon {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
-.project .links .icon,
-.project .links .more {
+.project .links .icon {
   font-weight: bold;
   color: var(--subtitle);
   transition: 0.3s;
 }
-.project .links .more {
-  gap: 0.2rem;
-}
-.project .links .more .arrow-right {
-  font-size: 1rem;
-}
-.project .links .more:hover,
 .project .links .icon:hover {
   color: var(--title);
 }

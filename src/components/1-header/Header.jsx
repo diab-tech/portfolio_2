@@ -72,6 +72,7 @@ const Header = () => {
           // Prevent PageScroll
           document.body.style.overflow = "hidden";
         }}
+        aria-label="Open menu"
       />
 
       <div />
@@ -96,7 +97,7 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <button className="toggle-mode">
+      <button className="toggle-mode" aria-label="Change Theme">
         <i className="moon icon-moon-o"></i>
         <i className="sun icon-sun"></i>
       </button>
@@ -129,7 +130,7 @@ const Header = () => {
           </ul>
         </div>
       )}
-      <a href="#up" className="scroll2up flex">
+      <a href="#up" className="scroll2up flex" aria-label="Scroll Up">
         <span className="icon-keyboard_arrow_up"></span>
       </a>
     </header>

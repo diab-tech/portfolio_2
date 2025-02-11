@@ -28,16 +28,25 @@ function Hero() {
           impression.
         </p>
         <div className="social-icon p-relative">
-          <a href="https://github.com/diab-tech" target="_blank">
+          <a
+            href="https://github.com/diab-tech"
+            target="_blank"
+            aria-label="Visit My GitHub profile"
+          >
             <span className="icon-github"></span>
           </a>
           <a
             href="https://www.linkedin.com/in/shabaan-diab-06bb0921a/"
             target="_blank"
+            aria-label="Visit My LinkedIn profile"
           >
             <span className="icon-linkedin-square"></span>
           </a>
-          <a href="mailto:shapan.mohamed9779@gmail.com" target="_blank">
+          <a
+            href="mailto:shapan.mohamed9779@gmail.com"
+            target="_blank"
+            aria-label="Send an email to Me"
+          >
             <span className="icon-envelope"></span>
           </a>
         </div>

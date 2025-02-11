@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://polite-druid-d2ab23.netlify.app/sitemap.xml

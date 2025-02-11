@@ -1,21 +1,29 @@
-import { memo } from "react";
-import styles from "./ProjectCard.module.css";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { memo, useEffect } from "react";
+import PropTypes from "prop-types";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import DOMPurify from "dompurify";
+import styles from "./projectCard.module.css";
 
-// eslint-disable-next-line react/display-name
-const Card = memo(({ project, handleProjectClick }) => {
-  // تنظيف الوصف باستخدام DOMPurify
+const Card = ({ project, handleProjectClick }) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
+
   const sanitizedDescription = DOMPurify.sanitize(project.description);
 
   return (
-    <motion.div
+    <div
+      data-aos="zoom-in"
       className={styles.project}
-      initial={{ opacity: 0, y: 50, scale: 0.8 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, y: -50, scale: 0.8 }}
       onClick={() => handleProjectClick(project)}
+      role="link"
+      tabIndex={0}
+      aria-label={`Project card for ${project.name}. Click to view details.`}
     >
       <img
         className={styles.projectImg}
@@ -25,36 +33,25 @@ const Card = memo(({ project, handleProjectClick }) => {
       />
       <div className={styles.box}>
         <h2 className={styles.projectName}>{project.name}</h2>
-
-        {/* عرض الوصف بعد تصفيته */}
         <p
           className={styles.description}
           dangerouslySetInnerHTML={{ __html: sanitizedDescription }}
         />
       </div>
-      <div className={`${styles.links} flex space-between`}>
-        <div className="flex gap-10">
-          <a className={styles.icon} href={project.link}>
-            <span className="icon-link"></span>
-          </a>
-          <a className={styles.icon} href={project.github}>
-            <span className="icon-github"></span>
-          </a>
-        </div>
-        <Link
-          className={`${styles.more} flex`}
-          to={"/more"}
-          state={{ project }}
-        >
-          more
-          <span
-            className="arrow-right icon-arrow-right"
-            style={{ alignSelf: "end" }}
-          ></span>
-        </Link>
-      </div>
-    </motion.div>
+    </div>
   );
-});
+};
 
-export default Card;
+// ✅ تعريف PropTypes قبل تمرير `Card` إلى `memo`
+Card.propTypes = {
+  project: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+  }).isRequired,
+  handleProjectClick: PropTypes.func.isRequired,
+};
+
+Card.displayName = "ProjectCard"; // إصلاح التحذير حول display name
+
+export default memo(Card); // ✅ تمرير المكون بعد تعريف propTypes

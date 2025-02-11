@@ -23,7 +23,7 @@
   padding: 0.75rem;
   font-size: 16px;
   color: #fff;
-  opacity: 0.5;
+  opacity: 0.7;
   border-radius: var(--rad-6);
   border: none;
   transition: 0.4s;
@@ -66,7 +66,7 @@
     border-radius: 5px;
     box-shadow: 1px 1px 10px var(--filter-shadow),
       inset 0px 0px 4px 0px var(--filter-shadow);
-    padding: 1rem 0;
+    padding: 1rem 0.4rem;
   }
   .main section.left .filterBtn {
     width: fit-content;
