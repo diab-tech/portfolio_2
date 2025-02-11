@@ -42,7 +42,6 @@ const Card = ({ project, handleProjectClick }) => {
   );
 };
 
-// ✅ تعريف PropTypes قبل تمرير `Card` إلى `memo`
 Card.propTypes = {
   project: PropTypes.shape({
     name: PropTypes.string.isRequired,
