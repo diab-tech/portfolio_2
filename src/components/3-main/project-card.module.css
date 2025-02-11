@@ -44,11 +44,8 @@
   /* ===-webkit-browsers=== */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3; /* إظهار سطرين فقط */
-  text-overflow: ellipsis; /* إضافة النقاط في النهاية */
-
-  /* ====For non-webkit-browsers ==== */
-  /* تحديد ارتفاع العنصر ليشمل سطرين فقط */
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
   max-height: calc(1.4rem * 3);
 }
 .main section.right .project .technologies {

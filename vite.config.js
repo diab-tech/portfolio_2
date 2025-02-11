@@ -9,4 +9,9 @@ export default defineConfig({
       "Content-Security-Policy": "style-src 'self' 'unsafe-inline';",
     },
   },
+  css: {
+    modules: {
+      scopeBehaviour: "local", // تأكد أن القيمه 'local' وليس 'global'
+    },
+  },
 });

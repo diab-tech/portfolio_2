@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import DOMPurify from "dompurify";
-import styles from "./projectCard.module.css";
+import styles from "./project-card.module.css";
 
-const Card = ({ project, handleProjectClick }) => {
+function Card({ project, handleProjectClick }) {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -40,7 +40,7 @@ const Card = ({ project, handleProjectClick }) => {
       </div>
     </div>
   );
-};
+}
 
 Card.propTypes = {
   project: PropTypes.shape({
