@@ -50,7 +50,8 @@ button:disabled {
 }
 .dark-mode {
   --primary: #000;
-  --secondary: rgb(24, 24, 27);
+  /* --secondary: rgb(24, 24, 27); */
+  --secondary: rgb(54 54 54);
   --filter-shadow: rgb(93, 188, 252);
   --subtitle: rgb(161 161 170);
   --title: rgb(244 244 245);
