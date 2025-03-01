@@ -27,7 +27,7 @@ The project is built using the latest front-end technologies to ensure high perf
     id: 2,
     name: "Special Design",
     category: ["Vanilla JS"],
-    image: "/company-page.webp",
+    image: "../../special-design.webp",
     link: "https://diab-tech.github.io/special-design/",
     github: "https://github.com/diab-tech/special-design",
     description: `<strong>Special Design</strong> - Customizable Design for Personalization 🎨
